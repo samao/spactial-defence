@@ -1,0 +1,41 @@
+{
+  "__version__": "1.0.6",
+  "general": {
+    "designResolution": {
+      "width": 720,
+      "height": 1280
+    }
+  },
+  "physics": {
+    "collisionGroups": [
+      {
+        "index": 1,
+        "name": "PLAYER_BULLET"
+      },
+      {
+        "index": 2,
+        "name": "ENEMY"
+      },
+      {
+        "index": 3,
+        "name": "PLAYER"
+      },
+      {
+        "index": 4,
+        "name": "ENEMY_BULLET"
+      },
+      {
+        "index": 5,
+        "name": "ITEM"
+      }
+    ],
+    "collisionMatrix": {
+      "0": 0,
+      "1": 4,
+      "2": 10,
+      "3": 52,
+      "4": 8,
+      "5": 8
+    }
+  }
+}

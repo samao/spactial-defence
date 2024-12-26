@@ -129,6 +129,14 @@
       {
         "__uuid__": "6c49a2da-798a-45a9-ab67-6697d723359b",
         "__expectedType__": "cc.Material"
+      },
+      {
+        "__uuid__": "b1b8ce71-dd4b-4af2-b473-22035ce6dea2",
+        "__expectedType__": "cc.Material"
+      },
+      {
+        "__uuid__": "b824e03e-093c-4d39-91f2-1c5f72e40a4e",
+        "__expectedType__": "cc.Material"
       }
     ],
     "_visFlags": 0,

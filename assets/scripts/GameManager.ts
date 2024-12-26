@@ -118,7 +118,7 @@ export class GameManager extends Component {
         this.bullets.destroyAllChildren();
         this.player.active = true;
         this.items.active = true;
-        this.currentBulletType = WeaponType.NORMAL;
+        this.currentBulletType = WeaponType.POWER;
         this.score = 0;
         this.label.string = "0";
     }
@@ -166,7 +166,7 @@ export class GameManager extends Component {
 
     createBullet(pos: Vec3, speed: Vec2) {
         const bullet = Pool.instance().get(
-            speed.y < 0 ? this.enemyBullet : this.currentBulletType === WeaponType.POWER ? this.moonBullet : this.bullet,
+            speed.y < 0 ? this.enemyBullet : this.bullet,
             this.bullets
         );
         bullet.setPosition(pos.x, pos.y, pos.z);
@@ -177,6 +177,8 @@ export class GameManager extends Component {
             const cld = bullet.getComponent(Collider);
             cld.setGroup(1 << 4);
             cld.setMask(1 << 3);
+        } else {
+            bullet.getComponent(Bullet).useSpecial(this.currentBulletType)
         }
         this.audioManager.play(speed.y > 0 ? "bullet2" : "bullet1");
     }
